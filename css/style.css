@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto Mono';
+}
+
+section {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+.container {
+    position: relative;
+}
+
+.flex {
+    display: flex;
+}
+
+.flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexbetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.text-red {
+    color: red;
+}
+header {
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #fff;
+    padding: 0 1rem;
+}
+
+.header-wrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu_display {
+    /* display: block; */
+    opacity: 1;
+    top: 50px;
+}
+
+header nav {
+    font-weight: 700;
+    position: absolute;
+    right: 15px;
+    top: -250px;
+    background-color: #fff;
+    padding: 2rem;
+    /* display: none; */
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+header img {
+    width: 48px;
+    height: 48px;
+}
+
+@media (min-width: 768px) {
+    #menu_burger {
+        display: none;
+    }
+
+    header nav {
+        padding: 0;
+        position: relative;
+        opacity: 1;
+        right: 5px;
+        top: 0px;
+        transition: none;
+        background-color: #fff;
+    }
+
+    header nav a:hover {
+        border-bottom: 3px solid;
+        border-bottom-color: #CE6143;
+    }
+
+    ul {
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+main {
+    margin-top: 60px;
+    width: 100%;
+}
+
+.btn {
+    margin: 3rem 0;
+    padding: clamp(0.5rem, 0.6rem, 1rem) clamp(0.5rem, 0.8rem, 1rem);
+    color: black;
+    background-color: #FFD402;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+#home {
+    height: calc(100vh - 60px);
+    background-image: url('../img/stage.jpg');
+    background-size: cover;
+}
+
+#modal {
+    gap: 1rem;
+    width: 80%;
+    max-width: 950px;
+    max-height: 48vh;
+    background-color: black;
+    padding:  1rem 1rem 2rem 1rem;
+    position: absolute;
+    /* flex-shrink: 1; */
+}
+
+#modal img {
+    width: calc(100% - 465px);
+    aspect-ratio: 1;
+    object-position: center;
+    object-fit: cover;
+}
+
+.modal-content {
+    color: #fff;
+    max-width: 550px;
+}
+
+.modal-content h4 {
+    text-align: left;
+}
+
+.modal-content h4 {
+    text-transform: uppercase;
+    font-size: clamp(0.8rem, 2vmin, 1.1rem);
+}
+
+.modal-content a {
+    font-size: clamp(0.8rem, 2vmin, 1.1rem);
+}
+
+.modal-content h2 {
+    text-transform: uppercase;
+    font-size: clamp(1rem, 5vmin, 3rem);
+}
+
+.modal-content p {
+    font-size: clamp(0.8rem, 2vmin, 1.1rem);
+    padding-bottom: 1rem;
+}
+
+#social_links {
+    background-color: #fff;
+}
+
+.btn-container {
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.btn-black {
+    background-color: black;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+h3, h4 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#story .cards-container {
+    max-width: 60%;
+}
+
+#story .cards-container p {
+    text-align: center;
+}
+
+.cards-container {
+    padding-top: 2rem;
+    text-align: center;
+    gap: 2rem;
+}
+
+#news {
+    background-color: #FED500;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#news .cards-container h4, p {
+    text-align: left;
+    word-wrap: break-word;
+}
+
+#news .card {
+    max-width: 333px;
+    align-self: flex-start;
+    padding: 1rem;
+}
+
+#news .card img {
+    max-width: 100%;
+}
+
+#album-text {
+    width: 80%;
+}
+
+#album-text h4, #album-text h3 ,#album-text p {
+    text-align: left;
+}
+
+#album-text h3, #album-text p {
+    padding-top: 2rem;
+}
+
+#contact {
+    background-color: black;
+    color: #fff;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.dates-container {
+    width: 80%;
+    padding-top: 2rem;
+    text-align: center;
+    gap: 3rem;
+}
+
+
+.date-card {
+    width: 100%;
+    margin-top: 2rem;
+    max-width: 350px;
+}
+
+.date-card h3, .date-card h4 {
+    margin-top: 1rem;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+#contact h3 {
+    font-size: 1.4rem;
+}
+
+#contact h4 {
+    font-size: 1rem;
+}
+
+.disco-container {
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.disc-card {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.disc-card figure {
+    position: relative;
+}
+
+.disc-card figcaption {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -120%);
+    margin: auto;
+    text-align: center;
+}
+.disc-card span {
+    background-color: #eff7f6;
+    padding: 0 0.5rem;
+}
+.disc-card h4 {
+    padding-bottom: 1rem;
+}
+.disc-card .btn {
+    font-weight: 400;
+}
+
+footer {
+    background-color: #FED500;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+footer h3, footer h4 {
+    padding-top: 2rem;
+}
+.socials {
+    gap: 3rem;
+    padding-top: 2rem;
+    width: 60%;
+}
+
+footer p {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.icon-wrapper {
+    width: 100%;
+    max-width: 150px;
+}
